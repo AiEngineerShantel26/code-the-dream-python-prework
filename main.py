@@ -12,3 +12,12 @@ def get_books(author):
     except requests.exceptions.RequestException:
         print("There was a problem connecting to Open Library.")
         return []
+
+
+def make_book_list(data):
+    books = []
+    for item in data:
+        book = {}
+        book["title"] = item.get("title", "Unknown")
+        books.append(book)
+    return books
