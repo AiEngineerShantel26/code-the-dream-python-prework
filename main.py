@@ -19,5 +19,7 @@ def make_book_list(data):
     for item in data:
         book = {}
         book["title"] = item.get("title", "Unknown")
+        book["year"] = item.get("first_publish_year", "Unknown")
+        book["pages"] = item.get("number_of_pages_median", "Unknown")
         books.append(book)
     return books
