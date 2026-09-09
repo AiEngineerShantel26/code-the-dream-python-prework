@@ -47,3 +47,6 @@ def main():
     data = get_books(author)
     books = make_book_list(data)
     show_books(books)
+
+
+main()
