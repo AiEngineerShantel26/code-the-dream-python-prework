@@ -36,3 +36,14 @@ def show_books(books):
         print(str(i + 1) + ". " + books[i]["title"])
         print("First published: " + str(books[i]["year"]))
         print("Pages: " + str(books[i]["pages"]))
+
+
+def main():
+    print("Open Library Book Search")
+    author = input("Enter an author name: ").strip()
+    if author == "":
+        print("Please enter an author name.")
+        return
+    data = get_books(author)
+    books = make_book_list(data)
+    show_books(books)
