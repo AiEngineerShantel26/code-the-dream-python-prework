@@ -32,3 +32,7 @@ def show_books(books):
     for i in range(len(books)):
         if i == 10:
             break
+        print()
+        print(str(i + 1) + ". " + books[i]["title"])
+        print("First published: " + str(books[i]["year"]))
+        print("Pages: " + str(books[i]["pages"]))
