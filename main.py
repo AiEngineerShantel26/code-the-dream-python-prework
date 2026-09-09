@@ -23,3 +23,12 @@ def make_book_list(data):
         book["pages"] = item.get("number_of_pages_median", "Unknown")
         books.append(book)
     return books
+
+
+def show_books(books):
+    if len(books) == 0:
+        print("No books were found.")
+        return
+    for i in range(len(books)):
+        if i == 10:
+            break
